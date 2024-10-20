@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyControlHub - API Key Management Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        section {
+            margin: 20px auto;
+            width: 80%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        code {
+            background-color: #eee;
+            padding: 5px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>KeyControlHub</h1>
+        <p><strong>EBAYSOFT</strong></p>
+        <img src="/images/ebaysoft.jpg" alt="EBAYSOFT Logo">
+    </header>
+
+    <section>
+        <h2>Overview</h2>
+        <p>KeyControlHub is a template for building API key-controlled web applications. It simplifies the process of managing user logins, API key validation, and admin controls, allowing developers to focus on custom features without writing the core logic from scratch.</p>
+        <p>With KeyControlHub, you can quickly set up a system where users can generate API keys, make requests, and admins can manage users and their API key usage limits.</p>
+    </section>
+
+    <section>
+        <h2>Features</h2>
+        <ul>
+            <li><strong>User Registration & Login:</strong> Users can register and log in to receive a unique API key.</li>
+            <li><strong>API Key Management:</strong> Users can view their API key, remaining request limits, and personal information.</li>
+            <li><strong>Admin Panel:</strong> Admins can manage users, view all users' API keys, and control remaining request rights.</li>
+            <li><strong>Real-Time API Key Requests:</strong> Users can request API keys, and admins can respond in real-time.</li>
+            <li><strong>API Usage Tracking:</strong> API keys come with limited usage rights, which can be adjusted by admins.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>API Endpoints</h2>
+        <h3>1. User Authentication</h3>
+        <ul>
+            <li><code>GET /register</code>: View register page.</li>
+            <li><code>GET /login</code>: View login page.</li>
+            <li><code>POST /register</code>: Register a new user.</li>
+            <li><code>POST /login</code>: User login and token generation.</li>
+        </ul>
+
+        <h3>2. Admin Management</h3>
+        <ul>
+            <li><code>GET /</code>: Retrieve a list of all users' API keys, and request limits.</li>
+            <li><code>POST /all-apikeys</code>: Approve a user's API key request.</li>
+        </ul>
+
+        <h3>3. API Request Example</h3>
+        <ul>
+            <li><code>GET /api-request?apikey=YOUR_API_KEY</code>: Make an API request using your key.</li>
+        </ul>
+
+        <h3>4. API Key Management</h3>
+        <ul>
+            <li><code>GET /</code>: View the user's API key and request limits.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Usage</h2>
+        <ol>
+            <li><strong>Clone the repository:</strong>
+                <pre><code>git clone https://github.com/enesbayri/KeyControlHub_NodeJS.git</code></pre>
+            </li>
+            <li><strong>Install dependencies:</strong>
+                <pre><code>npm install</code></pre>
+            </li>
+            <li><strong>Set up environment variables:</strong>
+                <p>Create a <code>.env</code> file with the following variables:</p>
+                <pre><code>PORT = 3035
+SECRET_SESSION= Your Session Secret Key
+SECRET_JWT_KEY= Your JWT Secret Key
+EMAIL= Your email
+PASSWORD= Your password
+
+URL=http://localhost:3035/</code></pre>
+            </li>
+            <li><strong>Run the application:</strong>
+                <pre><code>npm start</code></pre>
+            </li>
+            <li><strong>Open</strong> <code>http://localhost:3035</code> in your browser.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Admin Interface</h2>
+        <p>After logging in with admin credentials, you will be automatically directed to the admin panel at <code>/</code>.</p>
+        <p>View all users and manage their API keys and usage rights.</p>
+    </section>
+
+    <section>
+        <h2>Application Screenshots</h2>
+        
+        <h3>User Dashboard</h3>
+        <img src="/images/ui/1.png" alt="User Dashboard">
+        
+        <h3>Admin Panel /Users</h3>
+        <img src="/images/ui/2.png" alt="Admin Panel Users">
+        
+        <h3>Admin Panel /Apikeys</h3>
+        <img src="/images/ui/3.png" alt="Admin Panel API Keys">
+        
+        <h3>Login Page</h3>
+        <img src="/images/ui/4.png" alt="Login Page">
+        
+        <h3>Register Page</h3>
+        <img src="/images/ui/5.png" alt="Register Page">
+        
+        <h3>API Request</h3>
+        <img src="/images/ui/7.png" alt="API Request">
+        
+        <h3>API Request Error</h3>
+        <img src="/images/ui/6.png" alt="API Request Error">
+    </section>
+
+    <section>
+        <h2>Contributing</h2>
+        <p>Feel free to fork this repository and contribute by submitting pull requests.</p>
+    </section>
+
+    <section>
+        <h2>License</h2>
+        <p>This project is licensed under the MIT License.</p>
+    </section>
+
+</body>
+</html>
